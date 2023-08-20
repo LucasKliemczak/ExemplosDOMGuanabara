@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos no DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: bisque;
+            font: normal 19pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Canção do Exílio</h1>
+    <p>Minha Terra tem Palmeiras</p>
+    <p>Onde <strong>canta</strong> o sabiá</p>
+    <p>As aves que aqui gorgeiam</p>
+    <p>Não gorgeiam como lá</p>
+    <div id="msg">clique aqui 1</div>
+    <div name="msg2">clique aqui 2</div>
+    <div class="msg3">clique aqui 3</div>
+    
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[2]
+        //corpo.style.background = 'black'
+        p1.style.color = 'blue'
+
+        var xid = window.document.getElementById('msg')
+        xid.style.background = 'red'
+        xid.innerText = 'Testando'
+
+        var xname = window.document.getElementsByName('msg2')[0]
+        xname.style.color = 'yellow'
+
+        window.document.write(p1.innerHTML)
+
+        var xquery = window.doument.querySelector('div#msg3')
+        xquery.style.color = 'red'
+
+
+    </script>
+</body>
+</html>
+
